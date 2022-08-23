@@ -77,7 +77,10 @@ document.getElementById('Btn-totalCost').addEventListener('click',function(){
 
     // final calculate
     const lastCount=playerTotal + managerCostValue + CoachCost;
-    console.log(lastCount); 
+    
+    const getUltimateExpense=document.getElementById('ultimate-cost');
+    getUltimateExpense.innerText =lastCount;
+    
      
 });
 
