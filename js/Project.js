@@ -66,7 +66,10 @@ document.getElementById('Btn-totalCost').addEventListener('click',function(){
     const managerCostValue=parseFloat(managerCostValueString);
 
     //get coach cost output//
-   
+    const inputCoachCost=document.getElementById('coach-cost');
+    const CoachCostString=inputCoachCost.value;
+    const CoachCost=parseFloat(CoachCostString);
+     
 });
 
 
