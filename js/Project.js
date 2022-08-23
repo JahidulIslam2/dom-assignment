@@ -59,3 +59,14 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 
 
 
+document.getElementById('Btn-totalCost').addEventListener('click',function(){
+    //get manager coost output
+    const inputManagerCost=document.getElementById('manager-cost');
+    const managerCostValueString=inputManagerCost.value;
+    const managerCostValue=parseFloat(managerCostValueString);
+
+    //get coach cost output//
+   
+});
+
+
