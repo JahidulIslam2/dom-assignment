@@ -64,7 +64,15 @@ function isplayerTotal(){
     const getPlayerTotal=document.getElementById('Player-TotalCost');
     const PlayerTotalString=getPlayerTotal.innerText;
     const Total=parseFloat(PlayerTotalString);
-    return Total;
+    if(isNaN(Total)){
+        alert('Please input Number...');
+        
+    }
+    else{
+        return Total;
+    }
+    
+    
 }
 
 function isManagerCost(){
@@ -72,7 +80,16 @@ function isManagerCost(){
     const inputManagerCost=document.getElementById('manager-cost');
     const managerCostValueString=inputManagerCost.value;
     const costForManager=parseFloat(managerCostValueString);
-    return costForManager;
+
+    if(isNaN(costForManager)){
+        alert('Please input Number');
+
+    }
+    else{
+
+        return costForManager;
+    }
+    
 }
 
 function isCoachCost(){
@@ -80,7 +97,13 @@ function isCoachCost(){
     const inputCoachCost=document.getElementById('coach-cost');
     const CoachCostString=inputCoachCost.value;
     const CostForCoach=parseFloat(CoachCostString);
-    return CostForCoach;
+    if(isNaN(CostForCoach)){
+        alert('Please Input Number');
+    }
+    else{
+        return CostForCoach;
+    }
+    
 
 }
 
@@ -89,6 +112,7 @@ document.getElementById('Btn-totalCost').addEventListener('click',function(){
     
 // get player cost
     const playerTotal=isplayerTotal();
+    
 //get manager cost output
    const managerCostValue= isManagerCost();
 
