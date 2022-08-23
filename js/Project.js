@@ -59,23 +59,43 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 
 
 
-document.getElementById('Btn-totalCost').addEventListener('click',function(){
-    //get manager coost output
+function isplayerTotal(){
+
     const getPlayerTotal=document.getElementById('Player-TotalCost');
     const PlayerTotalString=getPlayerTotal.innerText;
-    const playerTotal=parseFloat(PlayerTotalString);
-    
+    const Total=parseFloat(PlayerTotalString);
+    return Total;
+}
+
+function isManagerCost(){
 
     const inputManagerCost=document.getElementById('manager-cost');
     const managerCostValueString=inputManagerCost.value;
-    const managerCostValue=parseFloat(managerCostValueString);
+    const costForManager=parseFloat(managerCostValueString);
+    return costForManager;
+}
 
-    //get coach cost output//
+function isCoachCost(){
+
     const inputCoachCost=document.getElementById('coach-cost');
     const CoachCostString=inputCoachCost.value;
-    const CoachCost=parseFloat(CoachCostString);
+    const CostForCoach=parseFloat(CoachCostString);
+    return CostForCoach;
 
-    // final calculate
+}
+
+
+document.getElementById('Btn-totalCost').addEventListener('click',function(){
+    
+// get player cost
+    const playerTotal=isplayerTotal();
+//get manager cost output
+   const managerCostValue= isManagerCost();
+
+//get coach cost output//
+    const CoachCost= isCoachCost();
+
+// final calculate
     const lastCount=playerTotal + managerCostValue + CoachCost;
     
     const getUltimateExpense=document.getElementById('ultimate-cost');
