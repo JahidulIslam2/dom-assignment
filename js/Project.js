@@ -41,7 +41,7 @@ SelectedPlayerName(NameArray);
 // calculate per player cost//
 document.getElementById('btn-calculate').addEventListener('click',function(){
 
-    const PlayerRate=document.getElementById('plyer-input');
+    const PlayerRate=document.getElementById('player-input');
     const playerInputValueString=PlayerRate.value;        //player price
     const playerInputValue=parseFloat(playerInputValueString);
   
@@ -51,9 +51,9 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
    
     const perPlayerExpense=perPlayerValue * playerInputValue;
     
-    const playerTotalCost=document.getElementById('Plyer-TotalCost');
-    const finalAmount=playerTotalCost.innerText =perPlayerExpense;
-
+    const playerTotalCost=document.getElementById('Player-TotalCost');
+    playerTotalCost.innerText =perPlayerExpense;
+    
     
 });
 
@@ -61,6 +61,11 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 
 document.getElementById('Btn-totalCost').addEventListener('click',function(){
     //get manager coost output
+    const getPlayerTotal=document.getElementById('Player-TotalCost');
+    const PlayerTotalString=getPlayerTotal.innerText;
+    const playerTotal=parseFloat(PlayerTotalString);
+    
+
     const inputManagerCost=document.getElementById('manager-cost');
     const managerCostValueString=inputManagerCost.value;
     const managerCostValue=parseFloat(managerCostValueString);
@@ -69,6 +74,10 @@ document.getElementById('Btn-totalCost').addEventListener('click',function(){
     const inputCoachCost=document.getElementById('coach-cost');
     const CoachCostString=inputCoachCost.value;
     const CoachCost=parseFloat(CoachCostString);
+
+    // final calculate
+    const lastCount=playerTotal + managerCostValue + CoachCost;
+    console.log(lastCount); 
      
 });
 
